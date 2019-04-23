@@ -2,6 +2,10 @@ package com.allan.cursomc.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+
 import com.allan.cursomc.domain.Categoria;
 
 public class CategoriaDTO  implements Serializable {
@@ -9,6 +13,8 @@ public class CategoriaDTO  implements Serializable {
 	
 	
 	Integer id;
+	@NotEmpty(message="Preenchimento obrigatório")
+	@Length(min=5, max=80, message ="O tamanho deve ser entre 5 e 80 caracters")
 	String nome;
 	
 	
