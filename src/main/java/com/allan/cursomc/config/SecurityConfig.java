@@ -39,7 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(HttpSecurity http) throws Exception {
 		
 		if(Arrays.asList(env.getActiveProfiles()).contains("test")) {
-			http.headers().frameOptions().disable();
+			//http.headers().frameOptions().disable();
+			http.headers().frameOptions().sameOrigin();
 		}
 		
 		http.cors().and().csrf().disable();
