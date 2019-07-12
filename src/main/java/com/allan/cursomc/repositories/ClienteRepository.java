@@ -9,7 +9,7 @@ import com.allan.cursomc.domain.Cliente;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 	
-	@Transactional(readOnly=true)
+	@Transactional(readOnly=true)//Reduzir o likin 
 	Cliente findByEmail(String nome);
 
 }
