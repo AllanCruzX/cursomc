@@ -42,7 +42,6 @@ public class Cliente implements Serializable {
 	@JsonIgnore
 	private String senha;
 	
-	
 	@OneToMany(mappedBy = "cliente" , cascade=CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<Endereco>();
 	
@@ -58,7 +57,6 @@ public class Cliente implements Serializable {
 	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<Pedido>();
 	
-	private String imageUrl;
 
 	public Cliente() {
 		addPerfil(Perfil.CLIENTE);
@@ -185,12 +183,6 @@ public class Cliente implements Serializable {
 		return true;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
-	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
 
 }
