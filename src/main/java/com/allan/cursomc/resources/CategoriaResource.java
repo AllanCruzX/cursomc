@@ -26,6 +26,8 @@ import com.allan.cursomc.services.CategoriaService;
 @RequestMapping(value="/categorias")
 public class CategoriaResource {
 	
+	//Resource e a camada acima da service que vai se comunicar com a view
+	
 	@Autowired
 	private CategoriaService service;
 	

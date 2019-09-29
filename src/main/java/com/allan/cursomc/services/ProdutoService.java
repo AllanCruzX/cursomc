@@ -15,23 +15,16 @@ import com.allan.cursomc.repositories.CategoriaRepository;
 import com.allan.cursomc.repositories.ProdutoRepository;
 import com.allan.cursomc.services.exceptions.ObjectNotFoundException;
 
-
-
 @Service
-
 public class ProdutoService {
 
 	@Autowired
-
 	private ProdutoRepository repo;
 
 	@Autowired
-
 	private CategoriaRepository categoriaRepository;
 
 	public Produto find(Integer id) {
-		
-	
 
 		Optional<Produto> obj = repo.findById(id);
 

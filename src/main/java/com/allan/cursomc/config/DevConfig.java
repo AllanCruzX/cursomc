@@ -22,6 +22,8 @@ public class DevConfig {
 	@Value("${spring.jpa.hibernate.ddl-auto}")
 	private String strategy;
 	
+	//Com o @Bean eu posso injetar a classe e usar o metodo.
+	
 	@Bean
 	public boolean instantiateDatabase() throws ParseException {
 		

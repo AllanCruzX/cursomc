@@ -9,7 +9,6 @@ import com.allan.cursomc.domain.Cidade;
 import com.allan.cursomc.repositories.CidadeRepository;
 
 @Service
-
 public class CidadeService {
 
 	@Autowired

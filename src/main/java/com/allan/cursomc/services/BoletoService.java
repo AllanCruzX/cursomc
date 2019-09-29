@@ -9,6 +9,7 @@ import com.allan.cursomc.domain.PagamentoComBoleto;
 
 @Service
 public class BoletoService {
+	//Camda de Servico 
 	
 	public void preencherPagamentoComBoleto (PagamentoComBoleto pagto , Date instanteDoPedido) {
 		Calendar cal = Calendar.getInstance();

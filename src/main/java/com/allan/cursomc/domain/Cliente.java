@@ -53,7 +53,7 @@ public class Cliente implements Serializable {
 	@CollectionTable(name = "telefone")
 	private Set<String> telefones = new HashSet<String>();
 	
-	@JsonIgnore
+	@JsonIgnore//@JsonIgnore (evitar recursividade infinita) no lado da associação que não deve ser serializada.
 	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<Pedido>();
 	

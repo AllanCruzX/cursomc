@@ -18,9 +18,7 @@ public class EstadoService {
 	private EstadoRepository repo;
 
 	public List<Estado> findAll() {
-		
 		return  repo.findAllByOrderByNome();
-
 	}
 
 }
